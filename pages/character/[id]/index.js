@@ -20,7 +20,7 @@ export default function Character({ data }) {
   const { name, status, species, gender, origin, location, image } = data
   return (
     <div 
-      className="bg-space bg-center bg fixed flex flex-col items-center justify-center py-2"
+      className="bg-space bg-center bg-cover bg-fixed h-screen w-screen flex flex-col items-center justify-center py-2"
     >
       <Head>
         <title>Rick & Morty Wiki</title>
@@ -39,14 +39,12 @@ export default function Character({ data }) {
             <li>Location: {location.name}</li>
           </ul>
           <Link href="/">
-            <button className="bg-green-500 border border-blue-200 p-2 text-lg text-white rounded-xl mt-14 hover:scale-105 active:scale-100 transform duration-200">
+            <button className="bg-green-500 border border-blue-200 p-2 text-lg text-white rounded-xl mt-20 hover:scale-105 active:scale-100 transform duration-200">
               Back to all Characters
             </button>
           </Link>
         </div>
       </main>
-
-      
     </div>
   )
 }
