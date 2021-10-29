@@ -15,7 +15,7 @@ function CharacterDetails({ data }) {
     <BsGenderMale className="inline text-blue-500 h-5" /> :
     <BsGenderFemale className="inline text-pink-400 h-5" />
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <h1 className="text-5xl mb-8 text-green-500 font-semibold ">{name}</h1>
       <Image src={image} width={200} height={200} className="rounded-full" />
       <ul className="text-lg bg-black opacity-60 text-white p-5 rounded-2xl w-80 mt-8">
