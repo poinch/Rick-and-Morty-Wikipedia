@@ -95,7 +95,9 @@ export default function Home({ data }) {
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
         <SearchBar submit={handleOnSubmitSearch} />
         <div>
-          <ul className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
+          <ul 
+            className="grid sm:grid-cols-2 sm:gap-x-20 lg:grid-cols-3 lg:gap-x-20 items-center max-w-4xl mt-6 sm:w-full"
+          >
             {results ? 
               results.map(({ id, name, image }) => {
                 return (
@@ -108,7 +110,7 @@ export default function Home({ data }) {
           </ul>
           {results && 
             <button 
-              className="bg-green-500 border border-blue-200 p-3 rounded-2xl text-white m-12 hover:scale-105 active:scale-100 transform duration-200"
+              className="bg-green-500 border border-blue-200 p-3 rounded-2xl text-white m-12 shadow-2xl hover:scale-105 active:scale-100 transform duration-200"
               onClick={handleLoadMore}
             >
               Load More...
