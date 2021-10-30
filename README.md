@@ -1,29 +1,17 @@
-# Next.js + Tailwind CSS Example
+# Rick & Morty Wikipedia 🧪🤪
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This project is a Rick and Morty Wiki. The application consists of a listing of all the series' characters as well as a details page for each one of them. The app also consumes the fantastic [Rick and Morty GraphQL API](https://rickandmortyapi.com/graphql).
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+It is built with [React](https://reactjs.org/), [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/) and it uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
 
-## Preview
+## How to run ▶️
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+The app is live on: [Rick and Morty Wiki](https://rickandmortywkipedia.netlify.com/)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+Alternatively, you can build it from source following the steps bellow:
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- Run `git clone https://github.com/VictorLandim/rick-and-morty-wiki.git` to clone the repo;
+- Run `npm install` to install dependencies;
+- Run `npm run test` to run the tests;
+- Run `npm run dev` to launch it in development;
+- Run `npm run build` to build it and then run `npm run start` to launch it in production;
