@@ -26,7 +26,6 @@ export default function Character({ data }) {
         <title>Rick & Morty Wiki</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className="flex flex-col text-center">
         <div>
           <CharacterDetails data={data} />

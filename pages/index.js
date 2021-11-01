@@ -65,17 +65,7 @@ export default function Home({ data }) {
     })
   }
 
-  const handleOnSubmitSearch = (e) => {
-    e.preventDefault()
-    
-    const { currentTarget = {} } = e
-    const fields = Array.from(currentTarget?.elements)
-    console.log(fields);
-    const fieldsQuery = fields.find((field) => field.name === 'query')
-
-    const value = fieldsQuery.value || ''
-    const endpoint = `https://rickandmortyapi.com/api/character/?name=${value}`
-
+  const onHandleOnSubmitSearch = (endpoint) => {
     updatePage({
       current: endpoint
     })
@@ -89,25 +79,11 @@ export default function Home({ data }) {
         <title>Rick & Morty Wiki</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <Logo />
-
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <SearchBar submit={handleOnSubmitSearch} />
+        <SearchBar submit={onHandleOnSubmitSearch} />
         <div>
-          <ul 
-            className="grid sm:grid-cols-2 sm:gap-x-20 lg:grid-cols-3 lg:gap-x-20 items-center max-w-4xl mt-6 sm:w-full"
-          >
-            {results ? 
-              results.map(({ id, name, image }) => {
-                return (
-                  <CharacterCard id={id} name={name} image={image} />
-                ) 
-              }) : 
-            <p className="text-2xl font-semibold mt-12">
-              OPS! Something went wrong, try search again using the right syntax
-            </p>}
-          </ul>
+          <CharacterCard results={results} />
           {results && 
             <button 
               className="bg-green-500 border border-blue-200 p-3 rounded-2xl text-white m-12 shadow-2xl hover:scale-105 active:scale-100 transform duration-200"

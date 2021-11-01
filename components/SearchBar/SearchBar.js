@@ -1,6 +1,20 @@
 function SearchBar({ submit }) {
+  const handleSubmitSearch = (e) => {
+    e.preventDefault()
+      
+      const { currentTarget = {} } = e
+      const fields = Array.from(currentTarget?.elements)
+      console.log(fields);
+      const fieldsQuery = fields.find((field) => field.name === 'query')
+
+      const value = fieldsQuery.value || ''
+      const endpoint = `https://rickandmortyapi.com/api/character/?name=${value}`
+
+      submit(endpoint)
+  }
+
   return (
-    <form onSubmit={submit} className="flex h-10 mt-10">
+    <form onSubmit={handleSubmitSearch} className="flex h-10 mt-10">
       <input 
         className="outline-none border border-blue-200 p-3 mr-2 rounded-2xl shadow-xl focus:border-blue-500" 
         type="search" 
